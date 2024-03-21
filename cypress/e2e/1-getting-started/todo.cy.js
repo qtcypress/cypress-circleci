@@ -81,10 +81,12 @@ describe('example to-do app', () => {
 
   context('with a checked task', () => {
     beforeEach(() => {
+      cy.viewport(550,750)
       // We'll take the command we used above to check off an element
       // Since we want to perform multiple tests that start with checking
       // one element, we put it in the beforeEach hook
       // so that it runs at the start of every test.
+      cy.log('this is a change')
       cy.contains('Pay electric bill')
         .parent()
         .find('input[type=checkbox]')
@@ -141,4 +143,4 @@ describe('example to-do app', () => {
       cy.viewport(550,750)
     })
   })
-})
+}
